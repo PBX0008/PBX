@@ -3614,11 +3614,11 @@ function initTabs(container) {
 
 function formatSecondsForResult(seconds){
   seconds = Math.max(0, Number(seconds) || 0);
-  if(seconds < 60) return `${seconds} ${seconds === 1 ? 'Second' : 'Seconds'}`;
+  if(seconds < 60) return `${seconds} ${seconds === 1 ? 'Sec' : 'Sec'}`;
   const mins = Math.floor(seconds / 60);
   const secs = seconds % 60;
-  if(secs === 0) return `${mins} ${mins === 1 ? 'Minute' : 'Minutes'}`;
-  return `${mins} ${mins === 1 ? 'Minute' : 'Minutes'}, ${secs} ${secs === 1 ? 'Second' : 'Seconds'}`;
+  if(secs === 0) return `${mins} ${mins === 1 ? 'Min' : 'Min'}`;
+  return `${mins} ${mins === 1 ? 'Min' : 'Min'}, ${secs} ${secs === 1 ? 'Sec' : 'Sec'}`;
 }
 
 function formatResultDate(value){
