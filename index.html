@@ -3068,8 +3068,8 @@ body.night-mode .pbx-final-card .pbx-sum-card b{color:#fff;}
     <div id="questionResultBox">
         <div class="result-flex">
             <div class="result-status" id="ind-status">Correct</div>
-            <div class="result-metric"><span class="material-symbols-outlined google-icon" aria-hidden="true">bar_chart</span><div><b id="ind-percent">0%</b><span>Correct</span></div></div>
-            <div class="result-metric"><span class="material-symbols-outlined google-icon" aria-hidden="true">schedule</span><div><b id="ind-time">0 Sec</b><span>Time Spent</span></div></div>
+            <div class="result-metric"><span class="material-symbols-outlined google-icon" aria-hidden="true">bar_chart</span><div><b id="ind-percent">0%</b><span>Answered Correctly</span></div></div>
+            <div class="result-metric"><span class="material-symbols-outlined google-icon" aria-hidden="true">schedule</span><div><b id="ind-time">0 Seconds</b><span>Time Spent</span></div></div>
             <div class="result-metric"><span class="material-symbols-outlined google-icon" aria-hidden="true">calendar_month</span><div><b id="ind-date">--/--/----</b><span>Last Updated</span></div></div>
             <div class="result-hidden"><b id="ind-score">0 / 0</b><b id="ind-scoring-rule">0 / 1</b><b id="ind-subject">General</b><b id="ind-topic">General</b></div>
         </div>
@@ -3614,11 +3614,11 @@ function initTabs(container) {
 
 function formatSecondsForResult(seconds){
   seconds = Math.max(0, Number(seconds) || 0);
-  if(seconds < 60) return `${seconds} ${seconds === 1 ? 'Sec' : 'Sec'}`;
+  if(seconds < 60) return `${seconds} ${seconds === 1 ? 'Second' : 'Seconds'}`;
   const mins = Math.floor(seconds / 60);
   const secs = seconds % 60;
-  if(secs === 0) return `${mins} ${mins === 1 ? 'Min' : 'Min'}`;
-  return `${mins} ${mins === 1 ? 'Min' : 'Min'}, ${secs} ${secs === 1 ? 'Sec' : 'Sec'}`;
+  if(secs === 0) return `${mins} ${mins === 1 ? 'Minute' : 'Minutes'}`;
+  return `${mins} ${mins === 1 ? 'Minute' : 'Minutes'}, ${secs} ${secs === 1 ? 'Second' : 'Seconds'}`;
 }
 
 function formatResultDate(value){
@@ -5530,4 +5530,3 @@ window.closePbxFinalResult = window.closePbxFinalResult || function(){ const m=d
 
 </body>
 </html>
-
